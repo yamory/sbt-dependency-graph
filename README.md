@@ -2,6 +2,8 @@
 
 Visualize your project's dependencies.
 
+This is a fork of [jrudolph/sbt-dependency-graph](https://github.com/jrudolph/sbt-dependency-graph) to quickly provide a public release of some fixes (support to avoid line truncation); the `io.yamory` Maven coordinates below include these.
+
 ## Preliminaries
 
 The plugin works best with sbt >= 0.13.6. See the [compatibility notes](#Compatibility-notes) to use this plugin with an older version of sbt.
@@ -13,7 +15,7 @@ install it as a [global plugin] so that you can use it in any SBT project withou
 this, add the plugin dependency to `~/.sbt/0.13/plugins/plugins.sbt`:
 
 ```scala
-addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.8.2")
+addSbtPlugin("io.yamory" % "sbt-dependency-graph" % "0.8.2-yamory-0.1.0")
 ```
 
 To add the plugin only to a single project, put this line into `project/plugins.sbt` of your project, instead.
