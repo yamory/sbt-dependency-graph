@@ -20,5 +20,7 @@ package sbt
 object SbtAccess {
   val unmanagedScalaInstanceOnly = Defaults.unmanagedScalaInstanceOnly
 
-  def getTerminalWidth: Int = JLine.usingTerminal(_.getWidth)
+  def getTerminalWidth: Int = JLine.usingTerminal { term ⇒
+    if (term.isSupported) term.getWidth else Int.MaxValue
+  }
 }
