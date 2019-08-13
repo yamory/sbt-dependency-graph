@@ -17,14 +17,14 @@ scmInfo := Some(
   )
 )
 
-developers := List(
-  Developer(
-    "jrudolph",
-    "Johannes Rudolph",
-    "johannes.rudolph@gmail.com",
-    url("https://virtual-void.net")
-  )
-)
+//developers := List(
+//  Developer(
+//    "jrudolph",
+//    "Johannes Rudolph",
+//    "johannes.rudolph@gmail.com",
+//    url("https://virtual-void.net")
+//  )
+//)
 
 
 useGpg := true
