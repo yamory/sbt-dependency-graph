@@ -10,21 +10,9 @@ publishArtifact in Test := false
 
 pomIncludeRepository := { _ => false }
 
-scmInfo := Some(
-  ScmInfo(
-    browseUrl = url("https://github.com/yamory/sbt-dependency-graph"),
-    connection = "scm:git@github.com:yamory/sbt-dependency-graph.git"
-  )
-)
-
-//developers := List(
-//  Developer(
-//    "jrudolph",
-//    "Johannes Rudolph",
-//    "johannes.rudolph@gmail.com",
-//    url("https://virtual-void.net")
-//  )
-//)
-
+pomExtra :=
+  Helpers.generatePomExtra("https://github.com/yamory/sbt-dependency-graph",
+                           "scm:git@github.com:yamory/sbt-dependency-graph.git",
+                           "jrudolph", "Johannes Rudolph")
 
 useGpg := true
